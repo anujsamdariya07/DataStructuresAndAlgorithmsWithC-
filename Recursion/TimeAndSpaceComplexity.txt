@@ -20,5 +20,3 @@ T(0) = k1
 Total => T(n) = n.k + k1
 Time Complexity = O(n.k + k1) => O(n)
 Time Complexity for fibonacci series = O(n)
-
-Space Complexity
