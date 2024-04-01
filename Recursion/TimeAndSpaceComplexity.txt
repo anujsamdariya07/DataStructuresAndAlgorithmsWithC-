@@ -1,0 +1,24 @@
+void printArray(int arr[], int n)
+{
+    if(n == 0) return;
+    // cout operation and recursion call take 'k' time for execution
+    cout << *arr << endl;
+    printArray(arr+1, n-1)
+}
+
+Time Complexity
+
+T(n) = k + T(n-1)
+T(n-1) = k + T(n-2)
+T(n-2) = k + T(n-3)
+ |       |    |
+ |       |    |
+ |       |    |
+ |       |    |
+T(0) = k1
+
+Total => T(n) = n.k + k1
+Time Complexity = O(n.k + k1) => O(n)
+Time Complexity for fibonacci series = O(n)
+
+Space Complexity
