@@ -14,7 +14,7 @@ int main()
     // Bad Practice
     // int* ptr;
     // cout << *ptr << endl;
-    // Grabage value is being stored in the this pointer
+    // Garbage value is being stored in the pointer
 
     // Good Practice this will help in debugging
     int* ptr2 = nullptr;
@@ -32,7 +32,7 @@ int main()
     char ch[10] = "Anuj";
     // This will point towards the entire ch
     char* cptr = ch;
-    // char* cptr = &ch;--> error
+    // char *cptr = &ch;// --> error
     cout << cptr << endl;
 
     // Bad Practice because we are making the ptr cptr2 point to a temporary location so there is no credibility for the presence of "Anuj"
