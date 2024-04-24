@@ -10,8 +10,8 @@ private:
 
 public:
     // bool isRegistered;
-    int id;
-    int age;
+    double id;
+    double age;
     string name;
     int nos;
 
