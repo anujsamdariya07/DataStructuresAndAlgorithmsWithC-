@@ -12,6 +12,7 @@
 
 // ListNode *middleNode(ListNode *head)
 // {
+    // Hare and Tortoise Method
     // ListNode *slow = head;
     // ListNode *fast = head;
 
@@ -26,6 +27,7 @@
     // }
     // return slow;
 
+    // Iterative approach 
 //     // int length = getLength(head);
 
 //     // ListNode* temp = head;

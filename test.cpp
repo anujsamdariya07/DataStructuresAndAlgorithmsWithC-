@@ -13,4 +13,7 @@ int main()
     // Sort a linked list
     // Quick sort works better for array or LL?
     // Merge sort works better for array or LL?
+
+    // Stacks
+    // Read stacks from cppreference.com
 }
