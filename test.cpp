@@ -1,5 +1,6 @@
 // !!! Stacks Class-3 left part
 // !!! Queue Class-2 First Negative Integer In Every K Window problem
+// !!! Queue Class-3 Sliding window maximum problem
 
 #include<iostream>
 #include<string>
