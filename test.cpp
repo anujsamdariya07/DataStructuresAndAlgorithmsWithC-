@@ -20,4 +20,9 @@ int main()
 
     // Stacks
     // Read stacks from cppreference.com
+    // Kth ancestor of a node in binary tree
+
+    // Trees
+    // Searching an element in an array using map
+    // Creating a tree using its postOrder and inOrder traversal arrays
 }
