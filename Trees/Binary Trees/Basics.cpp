@@ -1,5 +1,5 @@
-#include<iostream>
-#include<queue>
+#include <iostream>
+#include <queue>
 
 using namespace std;
 
@@ -7,8 +7,8 @@ class Node
 {
 public:
     int data;
-    Node* left;
-    Node* right;
+    Node *left;
+    Node *right;
 
     Node(int val)
     {
@@ -19,7 +19,7 @@ public:
 };
 
 // This will return the root node of the tree
-Node* createTree()
+Node *createTree()
 {
     cout << "Enter the value: ";
     int data;
@@ -29,9 +29,9 @@ Node* createTree()
     {
         return NULL;
     }
-    
+
     // Create new node
-    Node* newNode = new Node(data);
+    Node *newNode = new Node(data);
     // Create left subtree
     cout << "For left of " << newNode->data << ", ";
     newNode->left = createTree();
@@ -42,14 +42,14 @@ Node* createTree()
     return newNode;
 }
 
-void preOrderTraversal(Node* root)
+void preOrderTraversal(Node *root)
 {
     // Base case
     if (root == NULL)
     {
         return;
     }
-    
+
     // NLR
     // N
     cout << root->data << " ";
@@ -59,14 +59,14 @@ void preOrderTraversal(Node* root)
     preOrderTraversal(root->right);
 }
 
-void inOrderTraversal(Node* root)
+void inOrderTraversal(Node *root)
 {
     // Base case
     if (root == NULL)
     {
         return;
     }
-    
+
     // LNR
     // L
     preOrderTraversal(root->left);
@@ -76,14 +76,14 @@ void inOrderTraversal(Node* root)
     preOrderTraversal(root->right);
 }
 
-void postOrderTraversal(Node* root)
+void postOrderTraversal(Node *root)
 {
     // Base case
     if (root == NULL)
     {
         return;
     }
-    
+
     // LRN
     // L
     preOrderTraversal(root->left);
@@ -93,41 +93,41 @@ void postOrderTraversal(Node* root)
     cout << root->data << " ";
 }
 
-void lowLevelOrderTraversal(Node* root)
+void lowLevelOrderTraversal(Node *root)
 {
-    queue<Node*> q;
+    queue<Node *> q;
     q.push(root);
     q.push(NULL);
 
     while (q.size() > 1)
     {
-        Node* front = q.front();
+        Node *front = q.front();
         q.pop();
 
         if (front == NULL)
         {
             cout << endl;
             q.push(NULL);
-        } else 
+        }
+        else
         {
             cout << front->data << " ";
 
-        if (front->left != NULL)
-        {
-            q.push(front->left);
-        }
-        if (front->right != NULL)
-        {
-            q.push(front->right);
-        }
+            if (front->left != NULL)
+            {
+                q.push(front->left);
+            }
+            if (front->right != NULL)
+            {
+                q.push(front->right);
+            }
         }
     }
-     
 }
 
 int main()
 {
-    Node* root = createTree();
+    Node *root = createTree();
 
     cout << "Printing Preorder: ";
     preOrderTraversal(root);
